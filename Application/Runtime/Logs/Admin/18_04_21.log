@@ -1,0 +1,819 @@
+[ 2018-04-21T19:24:58+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000453s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2018-04-21T19:25:06+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `blog_admin` [ RunTime:0.1272s ]
+SQL: SELECT * FROM `blog_admin` WHERE `username` = 'admin' AND `password` = '6f1779da8462d85c012588fb73a2efb7' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `blog_admin` SET `loginAt`='1524309906',`loginIp`='0.0.0.0' WHERE `adminId` = 1 [ RunTime:0.0694s ]
+
+[ 2018-04-21T19:25:07+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011302s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011498s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2018-04-21T19:25:10+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+
+[ 2018-04-21T19:25:15+08:00 ] ::1 /thinkphp/blog/index.php/admin/category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `blog_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2018-04-21T19:25:16+08:00 ] ::1 /thinkphp/blog/index.php/admin/comment/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `blog_comment` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_comment` LIMIT 1   [ RunTime:0.0288s ]
+SQL: SELECT * FROM `blog_comment` ORDER BY commentId DESC LIMIT 0,30   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011763s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000904s ]
+
+[ 2018-04-21T19:25:17+08:00 ] ::1 /thinkphp/blog/index.php/admin/link/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000403s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_link` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_link` ORDER BY linkId DESC LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001167s ]
+
+[ 2018-04-21T19:25:19+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0202s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000345s ]
+
+[ 2018-04-21T19:27:11+08:00 ] ::1 /thinkphp/blog/index.php/admin/link/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000898s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_link` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `blog_link` ORDER BY linkId DESC LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015578s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2018-04-21T19:27:13+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001037s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0043s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+
+[ 2018-04-21T19:30:23+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000246s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000910s ]
+
+[ 2018-04-21T19:30:30+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000866s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0043s ]
+SQL: SELECT `categoryId`,`name` FROM `blog_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000400s ]
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 48 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 49 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 53 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 59 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 112 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 141 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000925s ]
+
+[ 2018-04-21T19:31:58+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0790s ]
+SQL: INSERT INTO `blog_article` (`title`,`description`,`content`,`image`,`status`,`sort`,`createdAt`,`categoryId`) VALUES ('php弱类型','你知道phphei的黑魔法么，很好玩的有兴趣的话来了解下啊‍‍‍‍‍','你知道php&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_1&quot;&gt;hei&lt;/span&gt;&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_0&quot;&gt;&lt;/span&gt;的黑魔法么，很好玩的&lt;br/&gt;有兴趣的话来了解下啊&lt;p&gt;&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_3&quot;&gt;‍&lt;/span&gt;&lt;/p&gt;&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_2&quot;&gt;‍&lt;/span&gt;&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_1&quot;&gt;&lt;/span&gt;&lt;br/&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_6&quot;&gt;‍&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_5&quot;&gt;‍&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_4&quot;&gt;‍&lt;/span&gt;&lt;/p&gt;&lt;br/&gt;','','1','0','1524310318','4') [ RunTime:0.0887s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0047s ]
+SQL: UPDATE `blog_category` SET `total`=total+1 WHERE `categoryId` = 4 [ RunTime:0.0385s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000324s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007355s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000704s ]
+
+[ 2018-04-21T19:31:59+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2018-04-21T19:32:03+08:00 ] ::1 /thinkphp/blog/index.php/admin/link/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0072s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_link` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_link` ORDER BY linkId DESC LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011146s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011267s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2018-04-21T19:32:04+08:00 ] ::1 /thinkphp/blog/index.php/admin/comment/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000780s ]
+SQL: SHOW COLUMNS FROM `blog_comment` [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_comment` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_comment` ORDER BY commentId DESC LIMIT 0,30   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000410s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000539s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000509s ]
+
+[ 2018-04-21T19:32:05+08:00 ] ::1 /thinkphp/blog/index.php/admin/category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001006s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `blog_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000364s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2018-04-21T19:32:07+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000857s ]
+
+[ 2018-04-21T19:37:05+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0045s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000771s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2018-04-21T19:37:07+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000954s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001223s ]
+
+[ 2018-04-21T19:39:24+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2018-04-21T19:39:43+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000714s ]
+
+[ 2018-04-21T19:39:44+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000067s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000932s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009723s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009975s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001613s ]
+
+[ 2018-04-21T19:42:12+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010034s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2018-04-21T19:45:25+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000996s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010914s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001162s ]
+
+[ 2018-04-21T19:45:26+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013221s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2018-04-21T19:45:28+08:00 ] ::1 /thinkphp/blog/index.php/admin/category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000969s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `blog_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000783s ]
+
+[ 2018-04-21T19:45:31+08:00 ] ::1 /thinkphp/blog/index.php/admin/comment/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `blog_comment` [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_comment` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_comment` ORDER BY commentId DESC LIMIT 0,30   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000771s ]
+
+[ 2018-04-21T19:45:33+08:00 ] ::1 /thinkphp/blog/index.php/admin/link/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000793s ]
+SQL: SHOW COLUMNS FROM `blog_link` [ RunTime:0.0202s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_link` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `blog_link` ORDER BY linkId DESC LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2018-04-21T19:45:36+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0206s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0035s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000379s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000661s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2018-04-21T19:45:50+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/delete/id/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0204s ]
+SQL: DELETE FROM `blog_article` WHERE `articleId` = 2 [ RunTime:0.0727s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007866s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2018-04-21T19:45:51+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000372s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016408s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2018-04-21T19:47:53+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0044s ]
+SQL: SELECT `categoryId`,`name` FROM `blog_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000383s ]
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 48 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 49 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 53 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 59 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 112 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 141 行.
+NOTIC: [8] Undefined variable: data G:\wamp\wamp\www\thinkphp\blog\Application\Runtime\Cache\Admin\4a0fe2d354067f879639bdc66287b8f6.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017448s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000901s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000982s ]
+
+[ 2018-04-21T19:48:51+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/upload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000683s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given G:\wamp\wamp\www\thinkphp\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+
+[ 2018-04-21T19:49:19+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000766s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002287s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0045s ]
+SQL: INSERT INTO `blog_article` (`title`,`description`,`content`,`image`,`status`,`sort`,`createdAt`,`categoryId`) VALUES ('php弱类型','‍来了解下php黑魔法啊','&lt;p&gt;&lt;span style=&quot;display: none; line-height: 0px;&quot; id=&quot;_baidu_bookmark_start_0&quot;&gt;‍&lt;/span&gt;来了解下php黑魔法啊&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&lt;/p&gt;','http://localhost/thinkphp/blog/upload/2018-04-21/5adb25231453f.png','1','0','1524311359','4') [ RunTime:0.0601s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0057s ]
+SQL: UPDATE `blog_category` SET `total`=total+1 WHERE `categoryId` = 4 [ RunTime:0.0473s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003084s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002448s ]
+
+[ 2018-04-21T19:49:20+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002281s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016634s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001426s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001556s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002711s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002831s ]
+
+[ 2018-04-21T19:50:06+08:00 ] ::1 /thinkphp/blog/index.php/admin/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001276s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001499s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000941s ]
+
+[ 2018-04-21T19:50:07+08:00 ] ::1 /thinkphp/blog/index.php/admin/article/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001378s ]
+SQL: SHOW COLUMNS FROM `blog_article` [ RunTime:0.0054s ]
+SQL: SHOW COLUMNS FROM `blog_category` [ RunTime:0.0081s ]
+SQL: SELECT COUNT(*) AS tp_count FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT Article.articleId AS articleId,Article.title AS title,Article.description AS description,Article.hits AS hits,Article.createdAt AS createdAt,Article.updateAt AS updateAt,Article.status AS status,Article.sort AS sort,Category.name AS name,Category.categoryId AS categoryId FROM blog_article Article  JOIN blog_category Category ON Article.categoryId=Category.categoryId ORDER BY Article.articleId DESC LIMIT 0,20   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022850s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001200s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001414s ]
+
